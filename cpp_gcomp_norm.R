@@ -4,12 +4,11 @@
 
 if(!require("doSNOW")) {install.packages("doSNOW"); library(doSNOW)}
 if(!require("rstanarm")) {install.packages("rstanarm"); library(rstanarm)}
-if(!require("polyapost")) {install.packages("polyapost"); library(polyapost)}
 if(!require("boot")) {install.packages("boot"); library(boot)}
 if(!require("copula")) {install.packages("copula"); library(copula)}
 if(!require("dplyr")) {install.packages("dplyr"); library(dplyr)}
 
-N_sim = 5000
+N_sim = 2000 # 2000 or 5000, 2000 MC replications for the main analysis
 N_AC <- c(100,200, 600)
 N_BC <- 600
 b_trt <- log(0.25)
