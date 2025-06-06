@@ -23,8 +23,8 @@ This repository includes code to reproduce the simulation and analysis for the m
 
 ## Generate Summaries & Plots:
 
-  - Run `analysis_norm.R` (reads from e.g., `results/normal2/`, saves plots).
-  - Run `analysis_nonnorm.R` (reads from e.g., `results/non_norm2/`, saves plots). (Ensure result paths in these analysis scripts match where cpp_gcomp_*.R scripts saved their output. Also, ensure plot directories exist).
+  - Run `analysis_norm.R` and `analysis_nonnorm.R` to process results and generate plots.
+  - Note on Saving Plots: To save the generated plots as image files, you must uncomment the `ggsave()` lines within the `analysis_norm.R` and `analysis_nonnorm.R` scripts. Ensure the output directories (e.g., `plots/normal/` and `plots/non_norm/`) exist before running.
 
 
 ### Scripts are set up for N_sim = 2000 for the main analysis.
