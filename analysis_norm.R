@@ -60,8 +60,10 @@ for(i in 1:scenarios){
 }
 
 sim_all_norm <- bind_rows(results_all_norm)
+
+# drop very large estimates that would indicate matching failures in MAIC 
 s1 <- simsum(sim_all_norm, estvarname = "mean", se = "se", methodvar = "method",
-             by = c("N_AC", "meanX_AC"), x = T, true = 0, ref = "Bucher")
+             by = c("N_AC", "meanX_AC"), x = T, true = 0, ref = "Bucher",dropbig = T, control = list(dropbig.max = 20))
 
 s2 <- summary(s1) %>% tidy(stats = "bias")
 
